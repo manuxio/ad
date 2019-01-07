@@ -130,15 +130,6 @@ module.exports = {
     return new Promise((resolve, reject) => {
       const domain = this.config.domain;
       const map = {
-        description: 'description',
-        givenName: 'givenName',
-        telephoneNumber: 'telephoneNumber',
-        location: 'location',
-        physicalDeliveryOfficeName: 'physicalDeliveryOfficeName',
-        employeeID: 'employeeID',
-        employeeNumber: 'employeeNumber',
-        pwdLastSet: 'pwdLastSet',
-        company: 'company',
         firstName: 'givenName',
         lastName: 'sn',
         password: 'unicodePwd',
@@ -175,7 +166,6 @@ module.exports = {
           }
         }
       }
-      console.log('operations', operations);
 
       operations = operations.concat(later);
       let currUserName = userName;
