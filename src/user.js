@@ -175,6 +175,7 @@ module.exports = {
           }
         }
       }
+      console.log('operations', operations);
 
       operations = operations.concat(later);
       let currUserName = userName;
