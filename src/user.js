@@ -61,8 +61,10 @@ module.exports = {
         email && String(email).indexOf('@') === -1
           ? 'Invalid email address.'
           : !commonName
-            ? 'A commonName is required.'
-            : !userName ? 'A userName is required.' : true;
+          ? 'A commonName is required.'
+          : !userName
+          ? 'A userName is required.'
+          : true;
 
       if (valid !== true) {
         /* istanbul ignore next */
@@ -128,6 +130,15 @@ module.exports = {
     return new Promise((resolve, reject) => {
       const domain = this.config.domain;
       const map = {
+        description: 'description',
+        givenName: 'givenName',
+        telephoneNumber: 'telephoneNumber',
+        location: 'location',
+        physicalDeliveryOfficeName: 'physicalDeliveryOfficeName',
+        employeeID: 'employeeID',
+        employeeNumber: 'employeeNumber',
+        pwdLastSet: 'pwdLastSet',
+        company: 'company',
         firstName: 'givenName',
         lastName: 'sn',
         password: 'unicodePwd',
